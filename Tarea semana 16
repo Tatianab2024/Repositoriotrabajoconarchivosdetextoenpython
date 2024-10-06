@@ -1,0 +1,20 @@
+# Escritura en un archivo de texto
+# Abrimos (o creamos si no existe) un archivo llamado my_notes.txt en modo de escritura ('w')
+with open('my_notes.txt', 'w') as file:
+    # Escribimos tres líneas de notas personales en el archivo
+    file.write("Esta es mi primera nota.\n")
+    file.write("Estoy aprendiendo a trabajar con archivos en Python.\n")
+    file.write("Es importante cerrar los archivos después de usarlos.\n")
+# El archivo se cierra automáticamente al salir del bloque 'with'
+
+# Lectura de un archivo de texto
+# Abrimos el archivo my_notes.txt en modo de lectura ('r')
+with open('my_notes.txt', 'r') as file:
+    # Leemos el contenido línea por línea usando readline() y lo mostramos en consola
+    line = file.readline()
+    while line:
+        print(line.strip())  # strip() elimina el salto de línea adicional
+        line = file.readline()
+# El archivo se cierra automáticamente al salir del bloque 'with'
+
+# Fin del programa
